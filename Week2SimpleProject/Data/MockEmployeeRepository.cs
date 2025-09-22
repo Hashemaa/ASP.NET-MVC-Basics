@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Week2SimpleProject.Models;
+﻿using Week2SimpleProject.Models;
 
 namespace Week2SimpleProject.Data
 {
