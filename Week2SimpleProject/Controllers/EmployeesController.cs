@@ -30,7 +30,7 @@ namespace Week2SimpleProject.Controllers
 			}
 
 			TempData["error"] = "Something went wrong, please try again";
-			return View();
+			return View(employee);
 		}
 
 		public IActionResult RetrieveEmployee()
