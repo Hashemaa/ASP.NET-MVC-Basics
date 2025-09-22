@@ -1,0 +1,20 @@
+﻿@if (TempData["error"] != null)
+{
+	<script type="text/javascript">
+		function closeNotification(){
+			var notification = document.getElementById("notification");
+			notification.remove();
+		}
+	</script>
+	<div class="error-notification" onclick="closeNotification()" id="notification">@TempData["error"]</div>
+}
+@if (TempData["success"] != null)
+{
+	<script type="text/javascript">
+		function closeNotification(){
+			var notification = document.getElementById("notification");
+			notification.remove();
+		}
+	</script>
+	<div class="success-notification" onclick="closeNotification()" id="notification">@TempData["success"]</div>
+}

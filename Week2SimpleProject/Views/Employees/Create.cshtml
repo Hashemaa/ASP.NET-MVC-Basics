@@ -1,0 +1,38 @@
+﻿@model Employee
+@{
+	ViewData["Title"] = "Create Employee";
+}
+<partial name="_Notification" />
+<form method="post" asp-controller="Employees" asp-action="Create">
+	<lable asp-for="Name">Name</lable>
+	<br />
+	<input type="text" asp-for="Name" required />
+	<br />
+	<br />
+	<lable asp-for="Email">Email</lable>
+	<br />
+	<input type="email" asp-for="Email" required />
+	<br />
+	<br />
+	<lable asp-for="Phone">Phone</lable>
+	<br />
+	<input type="tel" asp-for="Phone" required />
+	<br />
+	<br />
+	<lable asp-for="Age">Age</lable>
+	<br />
+	<input type="number" asp-for="Age" required />
+	<br />
+	<br />
+	<lable asp-for="Salary">Salary</lable>
+	<br />
+	<input type="number" step="0.01" asp-for="Salary" required />
+	<br />
+	<br />
+	<lable asp-for="IsCurrentlyHired">IsCurrentlyHired</lable>
+	<br />
+	<input type="checkbox" asp-for="IsCurrentlyHired" />
+	<br />
+	<br />
+	<button type="submit">Add</button>
+</form>

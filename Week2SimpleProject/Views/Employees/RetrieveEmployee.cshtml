@@ -1,0 +1,43 @@
+﻿@model Employee
+@{
+	ViewData["Title"] = "Retrieve Employee by Id";
+}
+<partial name="_Notification" />
+
+<form asp-controller="Employees" asp-action="RetrieveEmployee">
+	<label for="id">Retrieve Employee by Id</label>
+	<br />
+	<input name="id" type="number" />
+	<br>
+	<br />
+	<button type="submit">Find Employee</button>
+</form>
+@if(Model != null){
+<table width="100%">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Age</th>
+		<th>Salary</th>
+		<th>Is Currently Hired</th>
+		<th>Hire Date</th>
+		<th>Created At</th>
+		<th>Last Update</th>
+	</tr>
+
+	<tr>
+		<td>@Model.Id</td>
+		<td>@Model.Name</td>
+		<td>@Model.Email</td>
+		<td>@Model.Phone</td>
+		<td>@Model.Age</td>
+		<td>@Model.Salary.ToString("C2")</td>
+		<td>@Model.IsCurrentlyHired</td>
+		<td>@Model.HireDate</td>
+		<td>@Model.CreatedAt</td>
+		<td>@(Model.LastUpdatedAt == null ? "N/A" : Model.LastUpdatedAt)</td>
+	</tr>
+</table>
+}
